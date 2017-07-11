@@ -23,11 +23,11 @@ do
 done 
 
 # delete master container
-sudo docker rm -f master 
+docker rm -f master 
 
 # delete hadoop-master image
-sudo docker rmi krejcmat/hadoop-master:$tag 
+docker rmi krejcmat/hadoop-master:$tag 
 
 # rebuild hadoop-docker image
 pwd
-sudo docker build -t krejcmat/hadoop-master:$tag .
+docker build -t krejcmat/hadoop-master:$tag .
